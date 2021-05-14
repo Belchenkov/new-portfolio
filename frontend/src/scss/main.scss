@@ -1,0 +1,32 @@
+@import "variables/colors";
+@import "components/buttons";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none!important;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  background: $main-bg;
+  font-size: 15px;
+  font-weight: 400;
+
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    color: $color-links;
+
+    &:hover {
+      color: $color-links-hover;
+      text-decoration: none;
+    }
+  }
+}

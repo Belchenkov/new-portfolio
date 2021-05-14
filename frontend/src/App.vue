@@ -15,4 +15,11 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@import "scss/main";
+@import "scss/sections/header";
+
+</style>
