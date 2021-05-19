@@ -1,20 +1,4 @@
 <template>
-  <div class="mob-header">
-    <div class="d-flex">
-      <div class="navbar-brand">
-        <a href="/">
-          <img :src="logo" alt="Logo">
-        </a>
-      </div>
-
-      <button class="toggle-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </div>
-
   <header class="header-left" id="navbar-collapse-toggle">
     <div class="top">
       <a href="/">AB</a>
@@ -57,13 +41,10 @@
 </template>
 
 <script>
-import logo from '../assets/log.png';
-
 export default {
   name: 'Header',
   data() {
     return {
-      logo,
     };
   },
 };

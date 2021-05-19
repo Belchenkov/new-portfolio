@@ -71,7 +71,12 @@
   top: 0;
   width: 100%;
   z-index: 11;
-  
+
+  .d-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .toggle-menu {
     position: relative;
     width: 40px;
@@ -98,7 +103,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .mob-header {
     display: block;
   }
