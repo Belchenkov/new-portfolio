@@ -31,3 +31,12 @@ body {
     }
   }
 }
+
+.separated{
+  background-image: url('./assets/img/border.png');
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-repeat: repeat-x;
+  background-size: auto 6px;
+  background-position: center;
+}

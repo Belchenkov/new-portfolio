@@ -50,6 +50,7 @@
       </div>
     </div>
     <div class="me"></div>
+    <div class="separated"></div>
   </section>
 </template>
 

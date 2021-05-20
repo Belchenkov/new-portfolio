@@ -1,0 +1,142 @@
+#works {
+  .title h3 {
+    font-weight: 700;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .8);
+  }
+}
+
+#wrap{
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.wrapper {
+  position: relative;
+  padding: 0 0 50px 0;
+  margin: 0 auto;
+}
+
+.wrapper img{
+  width:395px;
+  height:277px;
+}
+
+@media only screen and (max-width: 500px) {
+  .wrapper img{
+    width:220px;
+    height:147px;
+  }
+}
+
+.topbar {
+  position: relative;
+  padding: 20px 0;
+  margin: 0 0 40px;
+}
+
+.back {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 38px;
+  color: #999;
+  background: #ddd;
+  background: rgba(255,255,255,0.9);
+  cursor: pointer;
+  display: none;
+  user-select: none;
+}
+
+.no-touch .back:hover {
+  background: #fff;
+  background: rgba(255,255,255,0.9);
+}
+
+@media screen and (max-width: 680px){
+  .back { left: auto; right: 50%; margin-left: 20px;}
+}
+
+.tp-grid {
+  list-style-type: none;
+  position: relative;
+  display: block;
+}
+
+.tp-grid li {
+  position: absolute;
+  cursor: pointer;
+  border: 5px solid #fff;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  display: none;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.no-js .tp-grid li {
+  position: relative;
+  display: inline-block;
+}
+
+.tp-grid li a {
+  display: block;
+  outline: none;
+}
+
+.tp-grid li img {
+  display: block;
+  border: none;
+}
+
+.tp-info,
+.tp-title {
+  position: absolute;
+  background: #fff;
+  color: #292929;
+  font-size: 22px;
+  line-height: 26px;
+  top: 40%;
+  width: 75%;
+  padding: 10px;
+  font-weight: 400;
+  text-align: right;
+  left: -100%;
+  box-shadow:
+          1px 1px 1px rgba(0,0,0,0.1),
+          10px 0 10px -3px rgba(0,0,0,0.7),
+          inset 0 0 5px rgba(0,0,0,0.04);
+}
+
+.touch .tp-info {
+  left: 0;
+}
+
+.no-touch .tp-info {
+  transition: all 0.3s ease-in-out;
+}
+
+.no-touch .tp-grid li:hover .tp-info {
+  transition-delay: 150ms;
+}
+
+.no-touch .tp-open li:hover .tp-info {
+  left: 0;
+}
+
+.tp-title {
+  padding: 10px 35px 10px 10px;
+  left: 0;
+}
+
+.tp-title span:nth-child(2){
+  color: #fff;
+}

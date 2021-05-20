@@ -26,11 +26,23 @@
             integrity="sha512-3fMsI1vtU2e/tVxZORSEeuMhXnT9By80xlmXlsOku7hNwZSHJjwcOBpmy+uu+fyWwGCLkMvdVbHkeoXdAzBv+w=="
             crossorigin="anonymous"
     ></script>
+    <script
+            src="./js/modernizr.custom.63321.js"
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="./js/scrolltosmooth.pkgd.min.js"
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="./js/jquery.stapel.js"
+            crossorigin="anonymous"
+    ></script>
 
     <script>
         (function ($) {
             "use strict";
-            var NAY = {};
+            const NAY = {};
 
             NAY.MenuTogglerClose = function () {
                 $(".toggle-menu").on('click', function () {
@@ -46,6 +58,52 @@
                NAY.MenuTogglerClose();
             });
         })(jQuery);
+    </script>
+
+    <script>
+        $(function() {
+            const $grid = $('#tp-grid'),
+                $name = $('#name'),
+                $close = $('#close'),
+                $loader = $('').insertBefore($grid),
+                stapel = $grid.stapel({
+                    randomAngle : true,
+                    delay : 50,
+                    gutter : 70,
+                    pileAngles : 5,
+                    onLoad : function(){
+                        $loader.remove();
+                    },
+                    onBeforeOpen : function( pileName ){
+                        $name.html( pileName );
+                    },
+                    onAfterOpen : function ( pileName){
+                        $close.show();
+                    }
+                });
+
+            $close.on('click', function() {
+                $close.hide();
+                $name.empty();
+                stapel.closePile();
+            } );
+
+            const smoothScroll = new scrollToSmooth('a', {
+                easing: 'easeInOutBack',
+                duration: 1490,
+                durationRelative: true,
+                onScrollStart: (data) => {console.log(data);},
+                onScrollUpdate: (data) => {console.log(data);},
+                onScrollEnd: (data) => {console.log(data);},
+            });
+            smoothScroll.init();
+
+            if ($("a[data-rel^='prettyPhoto']").length > 0){
+                $("a[data-rel^='prettyPhoto']").prettyPhoto({
+                    social_tools: false
+                });
+            }
+        });
     </script>
   </body>
 </html>
