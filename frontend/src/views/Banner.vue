@@ -1,5 +1,5 @@
 <template>
-  <section class="banner">
+  <section class="banner" id="home">
     <div class="top-fixed d-flex">
       <div class="info">
         <label>
@@ -43,7 +43,7 @@
               Electron.js, Ionic, React Native, Typescript
             </p>
             <div class="btn-bar">
-              <a href="#">Download CV</a>
+              <a href="https://career.habr.com/belchenkov--aleksey/print">Download CV</a>
             </div>
           </div>
         </div>
