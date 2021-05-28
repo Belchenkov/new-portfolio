@@ -1,5 +1,15 @@
 <template>
   <div>
+      <loading
+        v-model:active="isLoading"
+       :is-full-page="fullPage"
+        color="#34a"
+        background-color="#1A2026"
+        opacity="0.7"
+        blur="8px"
+        width="120"
+        height="120"
+      />
     <Menu />
     <Header />
     <main>
@@ -12,6 +22,9 @@
 </template>
 
 <script>
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
+
 import Header from './views/Header.vue';
 import Banner from './views/Banner.vue';
 import Works from './views/Works.vue';
@@ -28,6 +41,25 @@ export default {
     Banner,
     Works,
     Footer,
+    Loading,
+  },
+  data() {
+    return {
+      isLoading: false,
+      fullPage: true,
+    };
+  },
+  created() {
+    this.loaderActivate();
+  },
+  methods: {
+    loaderActivate() {
+      this.isLoading = true;
+
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 2000);
+    },
   },
 };
 </script>
