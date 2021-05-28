@@ -5,8 +5,7 @@
         <div class="col-lg-5">
           <div class="contact-info">
             <h4>Contact Me</h4>
-            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Beatae deleniti ipsa perferendis quae sequi sint.</p>
+            <p class="text-white">Fill out the form to contact me.</p>
             <ul>
               <li class="media">
                 <i class="fa fa-map"></i>
@@ -25,7 +24,7 @@
         </div>
 
         <div class="col-lg-7">
-          <div class="contact-info">
+          <div class="contact-form">
             <h4>Write to me</h4>
             <form id="contact-form">
               <div class="row">
@@ -64,13 +63,12 @@
                 </div>
                 <div class="col-md-12">
                   <div class="form-group mb-3">
-                    <input
-                      type="text"
+                    <textarea
                       name="Message"
                       id="message"
                       placeholder="Your Message*"
                       class="form-control"
-                    />
+                    ></textarea>
                   </div>
                 </div>
 
@@ -88,6 +86,8 @@
       </div>
     </div>
   </section>
+
+  <div class="separated container"></div>
 </template>
 
 <script>

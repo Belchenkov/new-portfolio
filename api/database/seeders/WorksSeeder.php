@@ -29,8 +29,8 @@ class WorksSeeder extends Seeder
                 'desc' => 'Верстка сайта-портфолио с SCSS, Flexbox, Grid System',
                 'img' => 'img/portfolio_sass-min.png',
                 'github_link' => 'https://github.com/Belchenkov/portfolio-sass',
-                'preview_link' => 'http://193.187.174.213/projects/portfolio-sass/dist/',
-                'demo_link' => 'https://nimb.ws/2ojO4l',
+                'preview_link' => 'https://nimbusweb.me/s/share/5609357/x48vlxdvt1oqy0z3x3ii',
+                'demo_link' => 'http://portfolio-sass-ab.surge.sh',
                 'category_id' => 1,
             ]
         ];
