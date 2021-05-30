@@ -6,7 +6,7 @@ services:
     volumes:
       - ./frontend:/var/www/frontend
     ports:
-      - "8080:80"
+      - "8082:80"
   frontend-nodejs:
     image: node:14-alpine
     volumes:
@@ -54,4 +54,4 @@ services:
       - "POSTGRES_PASSWORD=secret"
       - "POSTGRES_DB=api"
     ports:
-      - "54321:5432"
+      - "54325:5432"
