@@ -6,7 +6,7 @@ services:
     volumes:
       - ./frontend:/var/www/frontend
     ports:
-      - "8080:80"
+      - "8082:80"
   frontend-nodejs:
     image: node:14-alpine
     volumes:
@@ -20,6 +20,8 @@ services:
       dockerfile: nginx.docker
     volumes:
       - ./api:/var/www/api
+    depends_on:
+      - api-php-fpm
     ports:
       - "8081:80"
 
@@ -31,7 +33,6 @@ services:
       - ./api:/var/www/api
     depends_on:
       - api-postgres
-      - mailer
 
   api-php-cli:
     build:
@@ -42,7 +43,6 @@ services:
     working_dir: /var/www/api
     depends_on:
       - api-postgres
-      - mailer
     tty: true
 
   api-postgres:
@@ -54,11 +54,4 @@ services:
       - "POSTGRES_PASSWORD=secret"
       - "POSTGRES_DB=api"
     ports:
-      - "54321:5432"
-
-  mailer:
-    image: mailhog/mailhog
-    restart: unless-stopped
-    ports:
-      - "1025:1025"
-      - "8082:8025"
+      - "54325:5432"

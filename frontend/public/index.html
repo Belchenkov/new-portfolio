@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+    <title>Бельченков Алексей Иванович | Личный сайт Full-stack разработчика</title>
   </head>
   <body>
     <noscript>
@@ -13,5 +15,99 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"
+            integrity="sha512-3fMsI1vtU2e/tVxZORSEeuMhXnT9By80xlmXlsOku7hNwZSHJjwcOBpmy+uu+fyWwGCLkMvdVbHkeoXdAzBv+w=="
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="./js/modernizr.custom.63321.js"
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="./js/scrolltosmooth.pkgd.min.js"
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="./js/jquery.stapel.js"
+            crossorigin="anonymous"
+    ></script>
+
+    <script>
+        (function ($) {
+            "use strict";
+            const NAY = {};
+
+            NAY.MenuTogglerClose = function () {
+                $(".toggle-menu").on('click', function () {
+                    $(".header-left").stop().toggleClass('menu-open');
+                });
+
+                $(".header-left a").on('click', function () {
+                    var toggle = $('.toggle-menu');
+                });
+            }
+
+            $(document).on("ready", function () {
+               NAY.MenuTogglerClose();
+            });
+        })(jQuery);
+    </script>
+
+    <script async>
+        $(document).on("ready", function () {
+            setTimeout(() => {
+                $(function() {
+                    const $grid = $('#tp-grid'),
+                        $name = $('#name'),
+                        $close = $('#close'),
+                        $loader = $('').insertBefore($grid),
+                        stapel = $grid.stapel({
+                            randomAngle : true,
+                            delay : 50,
+                            gutter : 70,
+                            pileAngles : 5,
+                            onLoad : function(){
+                                $loader.remove();
+                            },
+                            onBeforeOpen : function( pileName ){
+                                $name.html( pileName );
+                            },
+                            onAfterOpen : function ( pileName){
+                                $close.show();
+                            }
+                        });
+
+                    $close.on('click', function() {
+                        $close.hide();
+                        $name.empty();
+                        stapel.closePile();
+                    } );
+
+                    const smoothScroll = new scrollToSmooth('a', {
+                        easing: 'easeInOutBack',
+                        duration: 490,
+                        durationRelative: true,
+                        onScrollStart: (data) => {console.log(data);},
+                        onScrollUpdate: (data) => {console.log(data);},
+                        onScrollEnd: (data) => {console.log(data);},
+                    });
+                    smoothScroll.init();
+
+                    if ($("a[data-rel^='prettyPhoto']").length > 0){
+                        $("a[data-rel^='prettyPhoto']").prettyPhoto({
+                            social_tools: false
+                        });
+                    }
+                });
+            }, 2000);
+        });
+    </script>
   </body>
 </html>

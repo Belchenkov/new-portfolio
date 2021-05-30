@@ -7,3 +7,6 @@ docker-clear:
 
 docker-up:
 	docker-compose up --build -d
+
+migrate-seed:
+	docker-compose exec api-php-cli php artisan migrate:refresh --seed
