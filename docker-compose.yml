@@ -1,5 +1,6 @@
 services:
   frontend-nginx:
+    restart: always
     build:
       context: ./frontend/docker
       dockerfile: nginx.docker
@@ -15,6 +16,7 @@ services:
     tty: true
 
   api-nginx:
+    restart: always
     build:
       context: ./api/docker
       dockerfile: nginx.docker
@@ -26,6 +28,7 @@ services:
       - "8081:80"
 
   api-php-fpm:
+    restart: always
     build:
       context: ./api/docker
       dockerfile: php-fpm.docker
@@ -35,6 +38,7 @@ services:
       - api-postgres
 
   api-php-cli:
+    restart: always
     build:
       context: ./api/docker
       dockerfile: php-cli.docker
@@ -46,6 +50,7 @@ services:
     tty: true
 
   api-postgres:
+    restart: always
     image: postgres:13-alpine
     volumes:
       - ./api/var/docker/postgres:/var/lib/postgresql/data
