@@ -33,17 +33,17 @@
                   :key="work.id"
                   :data-pile="category.title"
                 >
-                  <a :href="work.demo_link" target="_blank">
+                  <a :href="work.demo_link" target="_blank" title="Посмотреть работу">
                     <div class="tp-info">
                       <div class="mb-4">
                         <p class="fw-bold">{{ work.title }}</p>
                         <p class="text-muted">{{ work.desc }}</p>
                       </div>
                       <div class="d-flex justify-content-around">
-                        <a :href="work.github_link" target="_blank">
+                        <a :href="work.github_link" target="_blank" title="Посмотреть код">
                           <i class="fa fa-github fs-3 text-black-50"></i>
                         </a>
-                        <a :href="work.preview_link" target="_blank">
+                        <a :href="work.preview_link" target="_blank" title="Посмотреть preview">
                           <i class="fa fa-video-camera text-info fs-3"></i>
                         </a>
                       </div>
