@@ -57,12 +57,12 @@ class CategorySeeder extends Seeder
                 'docs_link' => 'https://www.electronjs.org/',
                 'img' => 'img/category/electron_category.jpeg',
             ],
-            [
+           /* [
                 'title' => 'TypeScript',
                 'slug' => 'ts',
                 'docs_link' => 'https://www.typescriptlang.org/',
                 'img' => 'img/category/ts_category.jpeg'
-            ],
+            ],*/
             [
                 'title' => 'Nuxt.js/Next.js/SSR',
                 'slug' => 'ssr',
@@ -75,25 +75,25 @@ class CategorySeeder extends Seeder
                 'docs_link' => 'https://reactnative.dev',
                 'img' => 'img/category/rn_category.jpeg'
             ],
-            [
+           /* [
                 'title' => 'GraphQL',
                 'slug' => 'graphql',
                 'docs_link' => 'https://graphql.org/',
                 'img' => 'img/category/graphql_category.png'
-            ],
-            [
+            ],*/
+            /*[
                 'title' => 'NS/PWA/Ionic/Flutter',
                 'slug' => 'ns-pwa',
                 'docs_link' => 'https://nativescript.org/',
                 'img' => 'img/category/ns_category.png'
-            ],
+            ],*/
             [
-                'title' => 'PHP/Laravel/Symfony',
+                'title' => 'PHP/Laravel/SQL',
                 'slug' => 'php',
                 'docs_link' => 'https://www.php.net/',
                 'img' => 'img/category/php_category.jpeg'
             ],
-            [
+            /*[
                 'title' => 'Python/Django/Flask',
                 'slug' => 'python',
                 'docs_link' => 'https://www.python.org/',
@@ -104,7 +104,7 @@ class CategorySeeder extends Seeder
                 'slug' => 'go',
                 'docs_link' => 'https://golang.org/',
                 'img' => 'img/category/go_category.png'
-            ]
+            ]*/
         ];
 
         foreach ($data as $category) {
