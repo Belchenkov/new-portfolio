@@ -423,10 +423,10 @@ class WorksSeeder extends Seeder
             [
                 'title' => 'RN Shop App',
                 'desc' => 'Build Shop App on React Native',
-                'img' => 'img/.png',
+                'img' => 'img/rn-shop.png',
                 'github_link' => 'https://github.com/Belchenkov/rn-shop',
-                'preview_link' => '',
-                'demo_link' => 'https://expo.io/@belchenkov/rn_shop_app',
+                'preview_link' => 'https://radikal.ru/video/IiXTNB68yjL',
+                'demo_link' => 'https://expo.io/@belchenkov/rn-shop',
                 'category_id' => 9,
             ],
             [
@@ -487,7 +487,7 @@ class WorksSeeder extends Seeder
             [
                 'title' => 'Ng Laravel CRM',
                 'desc' => 'Build CRM on Angular 11 & Laravel 8',
-                'img' => 'img/.png',
+                'img' => 'img/ng_lara_crm.png',
                 'github_link' => 'https://github.com/Belchenkov/ang_laravel_crm',
                 'preview_link' => '',
                 'demo_link' => 'https://github.com/Belchenkov/ang_laravel_crm',
